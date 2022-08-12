@@ -1,3 +1,5 @@
+/* By Mr Peter Wan */
+
 * {
     box-sizing: border-box;
 }
@@ -35,12 +37,30 @@ body {
     width: 100%;
     text-align: center;
     display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+ul{
+    width: 33%;
+    text-align: left;
+    list-style-type: none;
+    display: flex;
+    /* Remove padding */
+    /* Remove margins */  
+}
+li{
+    padding-right: 0.5em;
+    
 }
 
 button#contact{
     text-align: right;
-}
+    align-self: stretch;
+    margin-block: 5px;
+    margin-right: 2%;
 
+}
 
 
 h1{
@@ -70,18 +90,7 @@ main {
     background-color: white;
 }
 
-ul{
-    width: 33%;
-    text-align: left;
-    list-style-type: none;
-    display: flex;
-    /* Remove padding */
-    /* Remove margins */  
-}
-li{
-    padding-right: 0.5em;
-    
-}
+
 
 a, a:focus, a:active {
     text-decoration: none;
@@ -120,17 +129,36 @@ margin: auto;
     width: 300px;
 }
 
+iframe{
+    padding-inline: 2%;
+    padding-block: 1%;
+}
+
 #clear{
     clear: both;
+}
+
+p{
+    padding-inline: 2%;
+}
+
+blockquote{
+    padding: 0;
+}
+p.quote{
+    padding-inline: 0;
+    width: 100%;
 }
 
 form{
     flex: 2;
     overflow-y: auto;
+    width: 98%;
     padding: 1em;
     
     background-color: #eeeee9;
     
+    margin-top: 2%;
     margin-left: auto;
     margin-right: auto;
     
@@ -184,7 +212,7 @@ div#footer{
     text-align: center;
 }
 
-@media (max-width: 600px){
+@media (max-width: 665px){
     main {
         flex-direction: column;
         
@@ -204,4 +232,9 @@ div#footer{
         width: 100%;
     }
     
+    button#contact{
+        margin-right: 1%;
+        width: 50px;
+        text-align: center;
+    }
 }
