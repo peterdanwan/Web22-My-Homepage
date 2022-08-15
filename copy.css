@@ -145,7 +145,7 @@ a#interests {
 .interest {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 1fr 1r;
+    grid-template-rows: 1fr 1fr;
     padding: 3px;
     grid-gap: 3px;
 }
@@ -228,11 +228,10 @@ input[type="submit"],input[type="reset"]{
 }
 
 input[type="submit"]:hover,
-input[type="submit"]:focus,
-input[type="reset"]:hover,
-input[type="reset"]:focus{
+input[type="submit"]:focus
+{
     background-color: darkblue;
-    text-shadow: darkblue 1em;
+    text-shadow: darkblue 1px;
 }
     
 .buttons {
@@ -240,7 +239,7 @@ input[type="reset"]:focus{
     grid-column: 2/3;
 }
 .required{
-    font: 1em, serif;
+    font: 1em serif;
     color: red;
 }
 
@@ -300,10 +299,22 @@ div#footer{
         width: 50px;
         text-align: center;
     }
+
+    .interest {
+        grid-template-columns: 1fr;
+    }
 }
 
+.vid-container{
+    height: 250px;
+    margin: 0;
+}
 
-
+iframe{
+    border: 0;
+    width: 100%;
+    height:100%;
+}
 
 #column1{
     flex: 1;
@@ -387,7 +398,16 @@ body {
 }
 
 .input-control input:focus {
-    outline: 0;
+    /* outline: 0; */
+    outline: 3px solid lightblue;
+}
+
+.input-control.error input:focus{
+    outline: 1px solid #ff3860;
+}
+
+.input-control.success input:focus{
+    outline: 1px solid #09c372;
 }
 
 .input-control.success input {
@@ -404,4 +424,6 @@ body {
     height: 13px;
     text-align: left;
     padding-left: 0.3em;
+    padding-top:0.1em;
 }
+

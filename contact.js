@@ -1,4 +1,4 @@
-const fields = ["username", "email", "message", "phone", "occupation", "company", "address"];
+const fields = ["fullName", "email", "message", "phone", "occupation", "company", "address"];
 const errors = {
     Mandatory: "Field is Mandatory. Cannot be Empty.",
     Alphabet: "Username can only contain alphanumeric characters and a space",
@@ -149,7 +149,7 @@ const validateField = (fieldName) => {
     //0: invalid, 1: valid, 2: empty optional
     let isValid = 0;
     switch(fieldName){
-        case "username":
+        case "fullName":
             isValid = isNameValid(fieldName, value);
             break;
         case "email":
