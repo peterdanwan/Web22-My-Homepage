@@ -54,12 +54,17 @@ li{
     
 }
 
-button#contact{
+button#contact-me{
+    background-color: dimgrey;
+    margin-block: 0;
+    border-radius: 0.3em;
+    margin-right: 2%;
+}
+#contact{
     text-align: right;
     align-self: stretch;
     margin-block: 5px;
     margin-right: 2%;
-
 }
 
 
@@ -68,6 +73,18 @@ h1{
     letter-spacing: .3em;
 }
 
+#things-i-like{
+    padding: 1em;
+    margin: 0;
+    
+    background: linear-gradient(to right, #0f2027, #203a43, #2c5364); 
+}
+
+h2#showcase{
+    background: linear-gradient(to right, #0f2027, #203a43, #2c5364); 
+    margin: 0;
+    padding: 1em;
+}
 header, footer{
     background-color:antiquewhite;
     border:#131416 1px solid;
@@ -91,6 +108,15 @@ main {
 }
 
 
+main.Pictures {
+    border: 0.2em solid white;
+    display: flex;
+    justify-content: center;
+    background-color: white;
+    flex-grow: 1;
+    flex-basis: 0;
+}
+
 
 a, a:focus, a:active {
     text-decoration: none;
@@ -105,6 +131,33 @@ a {
     color: #fff; 
     text-decoration: inherit; 
 }
+
+a#interests {
+    color: dimgray; 
+    text-decoration: underline; 
+}
+
+.interest .interest {
+    width: 70%;
+
+}
+
+.interest {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1r;
+    padding: 3px;
+    grid-gap: 3px;
+}
+
+.interest .interest{
+    width: 100%;
+}
+
+
+
+
+
 
 
 /* 
@@ -150,23 +203,6 @@ p.quote{
     width: 100%;
 }
 
-form{
-    flex: 2;
-    overflow-y: auto;
-    width: 98%;
-    padding: 1em;
-    
-    background-color: #eeeee9;
-    
-    margin-top: 2%;
-    margin-left: auto;
-    margin-right: auto;
-    
-
-    display: grid;
-    grid-template-columns: 1.3fr 2.5fr;
-    grid-gap: 10px;
-}
 
 label{
     text-align: Left;
@@ -212,6 +248,34 @@ div#footer{
     text-align: center;
 }
 
+/* For expertise.js */
+.cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
+    grid-gap: 30px;
+}
+
+.card {
+    display: grid;
+    grid-template-rows: max-content 200px 1fr;
+    border: solid 0.2em rosybrown;
+    padding: 0.4em;
+}
+
+.card img {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+}
+
+.content {
+    background-color: white;
+}
+
+/* .interest{
+    width: 100%;
+} */
+
 @media (max-width: 665px){
     main {
         flex-direction: column;
@@ -219,7 +283,6 @@ div#footer{
     }
 
     #col2{
-       
         padding: 0;
         width: 100%;
         float: left;
@@ -237,4 +300,108 @@ div#footer{
         width: 50px;
         text-align: center;
     }
+}
+
+
+
+
+#column1{
+    flex: 1;
+    float: left;
+    width: 100%;
+    height: 100%;
+}
+
+#column2{
+    flex: 1;
+    float: left;
+    width: 100%;
+    height: 100%;
+}
+
+#column3{
+    flex: 1;
+    float: left;
+    width: 100%;
+    height: 100%;
+}
+
+img.interest{
+    height : 100%;
+}
+
+/* For form */
+body {
+    
+    font-family: 'Poppins', sans-serif;
+}
+
+#form{
+    flex: 2;
+    overflow-y: auto;
+    width: 98%;
+    padding: 1em;
+    
+    background-color: #eeeee9;
+    
+    margin-top: 2%;
+    margin-left: 0;
+    margin-right: auto;
+    
+
+
+    grid-template-columns: 1.3fr 2.5fr;
+    grid-gap: 10px;
+}
+
+
+
+
+#form h1 {
+    color: #0f2027;
+    text-align: center;
+}
+
+#form button {
+    padding: 10px;
+    margin-top: 10px;
+    width: 100%;
+    color: white;
+    background-color: rgb(41, 57, 194);
+    border: none;
+    border-radius: 4px;
+}
+
+.input-control {
+    display: flex;
+    flex-direction: column;
+}
+
+.input-control input {
+    border: 2px solid #f0f0f0;
+	border-radius: 4px;
+	display: block;
+	font-size: 12px;
+	padding: 10px;
+	width: 100%;
+}
+
+.input-control input:focus {
+    outline: 0;
+}
+
+.input-control.success input {
+    border-color: #09c372;
+}
+
+.input-control.error input {
+    border-color: #ff3860;
+}
+
+.input-control .error {
+    color: #ff3860;
+    font-size: 9px;
+    height: 13px;
+    text-align: left;
+    padding-left: 0.3em;
 }

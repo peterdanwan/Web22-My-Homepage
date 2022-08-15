@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <title>Expertise - Peter Wan</title>
+   <link rel='stylesheet' href='copy.css' type='text/css'>
+   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+   <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet" type="text/css">
+   <script src="contact.js"></script>
+</head>
+
+<body>
+
+    <nav id="fixedNav">    
+            <ul class="navigation">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="interests.html">Interests</a></li> 
+                <li><a href="expertise.html">Expertise</a></li>
+            </ul>
+    </nav>
+   
+    <div class="mainsection">
+        
+        <header>
+            <h1>Peter Wan</h1>
+            <img id="peter" src="peterwan.jpg" alt="Peter Wan Profile Picture">
+        </header>
+
+        <h2 id="showcase">Showcase: Front-end (AJAX) App </h2>
+        <!-- Container for our dog images -->
+        <main id="contacts" class="cards">
+
+        </main>
+
+
+        <footer>
+            <div>
+    
+            </div>
+            <h2> &copy; 2022 This is property of Peter Wan </h2>
+        </footer>
+    </div>
+
+    <script src="expertise.js"></script>
+    <script src="ui.js"></script>
+ 
+    <script>
+        function start(){
+            getReq(function(reqList){
+                populateInfo(reqList);
+                console.log('The fetched data', reqList);
+            })
+        }
+        window.onload = start();
+    </script>
+</body>
+
+</html>
